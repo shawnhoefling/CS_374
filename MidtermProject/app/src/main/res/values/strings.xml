@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MidtermProject</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Liters To Cups</string>
+    <string name="second_fragment_label">Calculator</string>
+    <string name="forward">Continue</string>
+    <string name="compute">COMPUTE</string>
+    <string name="enter_liters">Enter Liters</string>
+
+    <string name="developerInfo">
+        This app was developed by Shawn Hoefling
+    </string>
+    <string name="description">input liters, output will be converted cups</string>
+    <string name="conversion_result">Result: %1$.2f cups</string>
+    <string name="input_error_all_wrong">Enter a valid decimal number</string>
+    <string name="input_error_zero">The number must be greater than or equal to zero</string>
+</resources>
