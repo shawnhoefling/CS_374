@@ -18,15 +18,22 @@ import java.util.* // required
         return week[Random().nextInt(week.size)]
     }
 
-    fun randomFood() : String {
-        val foodType = arrayOf ("pellets", "insects", "wet food")
-        return foodType[Random().nextInt(foodType.size)]
+    fun fishFood (day : String) : String {
+        var food : String
+        when (day) {
+            "Wednesday" -> food = "red worms."
+            "Thursday" -> food = "blue worms."
+            "Friday" -> food = "mosquitoes."
+            "Sunday" -> food = "plankton."
+            else -> food = "nada."
+        }
+        return food
     }
 
     fun feedTheFish() {
         val day = randomDay()
-        val food = randomFood()
-        println("Today is $day and the fish eat $food")
+        val food = fishFood(day)
+        println("> Today is $day and the fish eat $food")
     }
 
     fun main(args: Array<String>) {
