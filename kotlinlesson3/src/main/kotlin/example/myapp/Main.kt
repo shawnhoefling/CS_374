@@ -12,9 +12,7 @@ fun buildAquarium() {
     mavis4.printSize()
 
     // for secondary constructor
-    val mavis5 = Aquarium(numberOfFish = 40)
-    mavis5.printSize()
-    mavis5.volume = 60
+    val mavis5 = Aquarium(length = 25, width = 25, height = 40)
     mavis5.printSize()
 }
 
