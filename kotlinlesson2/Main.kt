@@ -1,7 +1,25 @@
+// full code for Kotlin lesson 2
+
 import java.util.* // required
 
 fun main() {
-    val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot", "coral", "wood", "sand", "stone" )
+
+    fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
+        return operation(dirty)
+    }
+
+    val waterFilter: (Int) -> Int = { dirty -> dirty / 2 }
+    println(updateDirty(30, waterFilter))
+
+    fun increaseDirty(start: Int) = start + 1
+    println(updateDirty(15, ::increaseDirty))
+
+    var dirtyLevel = 19
+    dirtyLevel = updateDirty(dirtyLevel) { dirtyLevel -> dirtyLevel + 23}
+    println(dirtyLevel)
+
+    val decorations =
+        listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot", "coral", "wood", "sand", "stone")
 
     val eager = decorations.filter { it[0] == 'p' }
     println("eager: $eager")
@@ -26,29 +44,25 @@ fun main() {
     println("------------------------------------------")
     println("Flat: ${mylist.flatten()}")
 
-}
 
-    /*
     val isUnit = println("This is an expression")
     println(isUnit)
 
     val temperature = 10
-    val isHot = if(temperature > 50) true else false
+    val isHot = if (temperature > 50) true else false
     println(isHot)
 
     val temperature2 = 10
-    val message = "The water temperature is ${if(temperature2 > 50) "too warm" else "OK"}."
+    val message = "The water temperature is ${if (temperature2 > 50) "too warm" else "OK"}."
     println(message)
-    */
 
-    /*
-    fun randomDay() : String {
-        val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    fun randomDay(): String {
+        val week = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
         return week[Random().nextInt(week.size)]
     }
 
-    fun fishFood (day : String) : String {
-        var food : String
+    fun fishFood(day: String): String {
+        var food: String
         when (day) {
             "Wednesday" -> food = "red worms."
             "Thursday" -> food = "blue worms."
@@ -89,4 +103,4 @@ fun main() {
     fun main(args: Array<String>) {
         feedTheFish()
     }
-*/
+}
