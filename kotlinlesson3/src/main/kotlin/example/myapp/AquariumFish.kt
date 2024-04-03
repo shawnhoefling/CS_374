@@ -1,4 +1,5 @@
 package example.myapp
 
-class AquariumFish {
+abstract class AquariumFish {
+    abstract val color: String
 }
