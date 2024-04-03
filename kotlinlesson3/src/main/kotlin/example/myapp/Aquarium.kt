@@ -1,9 +1,10 @@
 package example.myapp
 
-class Aquarium {
-    var width: Int = 20
-    var height: Int = 40
-    var length: Int = 100
+class Aquarium (length:Int = 3000, width: Int = 2000, height: Int = 2500) {
+    // dimensions are in cm
+    var width: Int = width
+    var height: Int = height
+    var length: Int = length
 
 
     fun printSize() {
