@@ -21,4 +21,5 @@ enum class Color(val rgb: Int) {
 
 fun main() {
     makeDecorations()
+    
 }
