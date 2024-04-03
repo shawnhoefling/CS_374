@@ -1,5 +1,33 @@
 import java.util.* // required
-    // will assign kotlin.unit
+
+fun main() {
+    val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot", "coral", "wood", "sand", "stone" )
+
+    val eager = decorations.filter { it[0] == 'p' }
+    println("eager: $eager")
+
+    val filtered = decorations.asSequence().filter { it[0] == 'p' }
+    println("filtered: $filtered")
+
+    val newList = filtered.toList()
+    println("new list: $newList")
+
+    val lazyMap = decorations.asSequence().filter { it[1] == 'o' }.map {
+        println("access: $it")
+        it
+    }
+    println("----------------------------------------")
+    println("filtered: ${lazyMap.toList()}")
+
+    val mysports = listOf("basketball", "fishing", "running")
+    val myplayers = listOf("Lebron James", "Kimi Raikkonen", "Mika Hakkanen")
+    val mycities = listOf("Houston", "Helsinki", "New York")
+    val mylist = listOf(mysports, myplayers, mycities)
+    println("------------------------------------------")
+    println("Flat: ${mylist.flatten()}")
+
+}
+
     /*
     val isUnit = println("This is an expression")
     println(isUnit)
@@ -13,6 +41,7 @@ import java.util.* // required
     println(message)
     */
 
+    /*
     fun randomDay() : String {
         val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
         return week[Random().nextInt(week.size)]
@@ -60,4 +89,4 @@ import java.util.* // required
     fun main(args: Array<String>) {
         feedTheFish()
     }
-
+*/
