@@ -26,8 +26,16 @@ class Choice {
     }
 }
 
+class MyClass {
+    companion object {
+        const val CONSTANT3 = "constant in companion"
+        fun showClass(name: String) = println("This is the $CONSTANT3")
+    }
+}
+
 fun main() {
     println(Choice.name)
     Choice.showDescription("pick")
     Choice.showDescription("selection")
+    MyClass.showClass("CONSTANT3")
 }
